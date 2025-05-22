@@ -2,7 +2,7 @@ const observer = new MutationObserver(() => {
   const table = document.querySelector('#attendance-record');
   if (table && !table.dataset.initialized) {
     new DataTable('#attendance-record', {
-      ajax: 'https://script.google.com/macros/s/AKfycbyGIHMLOtyq7cFoRcxi_Je6C5cleUqW0I4NT9xp8z1pRoJWkXZvPz5he1EFfUlr_lXA/exec',
+      ajax: 'https://script.google.com/macros/s/AKfycbwyw7Vmb2svj51hjUpLX14txifQ1460pjtzLJXVcOIPbNW2tMDlDHnOICtimz5jJ0-u/exec',
       columns: [
         { data: 'ID' },
         { data: 'Name' },
