@@ -1,0 +1,29 @@
+<div class="greeting">
+  <h1>Welcome back, User!</h1>
+  <p id="current-date">Loading date...</p>
+  <p id="current-time">Loading time...</p>
+</div>
+
+<section>
+  <!-- your dashboard widgets, charts, etc. -->
+</section>
+
+<script>
+  function updateDateTime() {
+    const dateEl = document.getElementById("current-date");
+    const timeEl = document.getElementById("current-time");
+
+    const now = new Date();
+
+    const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    dateEl.textContent = now.toLocaleDateString(undefined, dateOptions);
+
+    const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+    timeEl.textContent = now.toLocaleTimeString(undefined, timeOptions);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    updateDateTime(); // Initial update
+    setInterval(updateDateTime, 1000); // Update time every second
+  });
+</script>
